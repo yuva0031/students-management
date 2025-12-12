@@ -1,59 +1,16 @@
-# StudentsManagement
+Student Management Angular Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+- Used Server-Side Rendering (SSR).
+- Main components include corresponding .server.ts files.
+- main.server.ts handles server pre-rendering.
+- main.ts handles client-side hydration (adding functionality after HTML loads).
+- Built as a standalone Angular application (no NgModule).
+- Used *ngFor directive to load and display the list of students.
+- Used Reactive Forms for the Add Student component.
+- **/home**
+<img width="1302" height="648" alt="Screenshot 2025-12-12 233551" src="https://github.com/user-attachments/assets/a4f6fa81-38d1-4f51-ad2a-8aad40be0d0c" />
+- **/add-student**
+<img width="1299" height="653" alt="Screenshot 2025-12-12 233619" src="https://github.com/user-attachments/assets/b2849959-7296-4989-bca6-b4ff27d66b73" />
+<img width="1307" height="648" alt="Screenshot 2025-12-12 233640" src="https://github.com/user-attachments/assets/0592ae4d-4335-4723-84c8-64d3c6fc6ff3" />
 
-## Development server
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
