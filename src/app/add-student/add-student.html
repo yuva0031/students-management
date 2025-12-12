@@ -1,0 +1,54 @@
+<h2 class="simple-title">Add Student</h2>
+
+<form [formGroup]="studentForm" (ngSubmit)="save()" class="simple-form">
+
+  <label>Name</label>
+  <input type="text" formControlName="name" class="simple-input">
+
+  <div *ngIf="f['name'].touched && f['name'].invalid" class="error">
+    <div *ngIf="f['name'].errors?.['required']">Name is required.</div>
+    <div *ngIf="f['name'].errors?.['minlength']">Minimum 5 characters.</div>
+  </div>
+
+  <label>Class</label>
+  <select formControlName="className" class="simple-input">
+    <option value="">-- Select Class --</option>
+    <option *ngFor="let c of classes">{{ c }}</option>
+  </select>
+
+  <div class="simple-hint" *ngIf="f['className'].value === 'Class 9'">
+    You will appear in board exams soon. All the Best !!
+  </div>
+
+  <div class="simple-hint" *ngIf="f['className'].value === 'Class 6'">
+    Welcome to middle school!
+  </div>
+
+  <div class="simple-hint"
+       *ngIf="f['className'].value && f['className'].value !== 'Class 6' && f['className'].value !== 'Class 9'">
+    Education and hobby go hand in hand!
+  </div>
+
+  <label>Gender</label>
+  <div class="simple-radio">
+    <label><input type="radio" value="Male" formControlName="gender"> Male</label>
+    <label><input type="radio" value="Female" formControlName="gender"> Female</label>
+  </div>
+
+  <label class="simple-checkbox">
+    <input type="checkbox" formControlName="hasHobby"> I have a hobby
+  </label>
+
+  <div *ngIf="f['hasHobby'].value">
+    <label>Hobby</label>
+    <input type="text" formControlName="hobby" class="simple-input">
+  </div>
+
+  <label>Favourite Subject (optional)</label>
+  <select formControlName="favouriteSubject" class="simple-input">
+    <option value="">-- Select Subject --</option>
+    <option *ngFor="let s of subjects">{{ s }}</option>
+  </select>
+
+  <button type="submit" class="simple-btn">Save</button>
+</form>
